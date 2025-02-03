@@ -18,7 +18,7 @@ def logger(path):
             args_kwargs_list = tuple(args_kwargs_list)  # преобразование в кортеж
 
             s += f'{now, name, args_kwargs_list, result}\n'  # строка для записи
-            with open(path, 'w',  encoding='utf-8') as f_write:  # файл  в режиме дополнения записей
+            with open(path, 'a',  encoding='utf-8') as f_write:  # файл  в режиме дополнения записей
                 f_write.write(s)
             return result
         return new_function
